@@ -1,0 +1,14 @@
+{% extends 'main/layoute.html' %}
+
+{% block title %}
+<title>Добавить фильм</title>
+{% endblock %}
+
+{% block content %}
+  <h1 class="my-4">Создать фильм</h1>
+  <form method="post" enctype="multipart/form-data" class="form">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+{% endblock %}
